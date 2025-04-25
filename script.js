@@ -1,7 +1,5 @@
-// Get the button
 let mybutton = document.getElementById("scrollToTopBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
 };
@@ -26,3 +24,12 @@ document.addEventListener("scroll", function () {
     header.classList.remove("sticky");
   }
 });
+
+// Dark mode toggle
+document.getElementById("toggleDarkMode").onclick = function () {
+  document.body.classList.toggle("dark-mode");
+  // เปลี่ยนไอคอนปุ่ม
+  this.textContent = document.body.classList.contains("dark-mode")
+    ? "☀️"
+    : "🌙";
+};
