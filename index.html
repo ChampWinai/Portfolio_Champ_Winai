@@ -1,377 +1,426 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Winai</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-    />
+    <title>Winai Boonyen — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- BG Glow Orbs -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- ═══ HEADER ═══ -->
     <header class="main-header">
       <div class="container nav-container">
-        <h1 class="logo">Winai Boonyen</h1>
+        <a href="#home" class="logo">W<span class="logo-dot">.</span></a>
         <nav>
           <ul class="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#work">Experience</a></li>
             <li><a href="#skill">Skills</a></li>
             <li><a href="#certificate">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <!-- เพิ่มหลัง tag </nav> ใน header -->
-        <button id="toggleDarkMode" aria-label="Toggle dark mode">🌙</button>
+        <div class="header-actions">
+          <button id="toggleLang" class="header-btn" aria-label="Switch language">
+            <span class="lang-label">EN</span>
+          </button>
+          <button id="toggleDarkMode" class="header-btn" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
       </div>
     </header>
 
+    <!-- ═══ HERO ═══ -->
     <section id="home" class="hero-section">
-      <div class="hero-flex two-col">
-        <div class="hero-img">
-          <img src="Photo/img_winai.png" alt="Profile Picture" />
-        </div>
+      <div class="container hero-flex">
         <div class="hero-text">
-          <h2>Welcome to My Portfolio</h2>
-          <p>
-            สวัสดีครับ ผมชื่อ นายวินัย บุญเย็น อายุ 25 ปี
-            ปัจจุบันกำลังศึกษาอยู่ชั้นปีที่ 4 สาขาวิชา วิทยาการคอมพิวเตอร์
-            คณะเทคโนโลยีสารสนเทศและนวัตกรรม มหาวิทยาลัยกรุงเทพ
-            ผมมีความสนใจในการพัฒนาเว็บไซต์, แอปพลิเคชันมือถือ และเทคโนโลยี IoT
-            โดยเฉพาะการสร้างระบบ Web Application ที่มีการแยกฝั่ง Frontend และ
-            Backend อย่างชัดเจน ผมมีประสบการณ์ในการพัฒนา Backend API ด้วยภาษา C#
-            และ ASP.NET Core ร่วมกับฐานข้อมูล PostgreSQL
-            ซึ่งช่วยจัดการข้อมูลจำนวนมากได้อย่างมีประสิทธิภาพ ส่วนฝั่ง Frontend
-            ผมใช้ HTML, CSS, JavaScript และ React.js ในการสร้าง UI
-            ที่ตอบสนองเร็ว และทันสมัย โดย React ทำหน้าที่เชื่อมต่อกับ API
-            เพื่อแสดงผลข้อมูลแบบ Real-time
+          <p class="hero-greeting">
+            <span data-th="สวัสดีครับ, ผมชื่อ" data-en="Hello, I'm">สวัสดีครับ, ผมชื่อ</span>
           </p>
+          <h1 class="hero-name">Winai <span class="text-gradient">Boonyen</span></h1>
+          <h2 class="hero-role">
+            <span class="typing-wrapper">Full-Stack Developer</span>
+          </h2>
+          <p class="hero-desc">
+            <span data-th="นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยกรุงเทพ มีความเชี่ยวชาญในการพัฒนา Web Application ทั้ง Frontend (React, Next.js) และ Backend (C#, ASP.NET Core, PostgreSQL) พร้อมประสบการณ์จริงจากการฝึกงานในบริษัทระดับองค์กร" data-en="4th-year Computer Science student at Bangkok University, specializing in full-stack web development with React, Next.js on the frontend and C#, ASP.NET Core, PostgreSQL on the backend. Hands-on enterprise experience from internship at Samart Corporation.">นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยกรุงเทพ มีความเชี่ยวชาญในการพัฒนา Web Application ทั้ง Frontend (React, Next.js) และ Backend (C#, ASP.NET Core, PostgreSQL) พร้อมประสบการณ์จริงจากการฝึกงานในบริษัทระดับองค์กร</span>
+          </p>
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">
+              <i class="fas fa-briefcase"></i>
+              <span data-th="ดูผลงาน" data-en="View Projects">ดูผลงาน</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i>
+              <span data-th="ติดต่อผม" data-en="Contact Me">ติดต่อผม</span>
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/winai-boonyen-78a5b3325/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/ChampWinai" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:boonyen.winai@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <div class="hero-img-wrapper">
+            <img src="Photo/img_winai.png" alt="Winai Boonyen — Full-Stack Developer" />
+          </div>
+          <div class="hero-blob"></div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ ABOUT ═══ -->
     <section id="about" class="about-section">
-      <div class="container about-container">
-        <div class="about-card">
-          <h2>About Me</h2>
-          <ul class="about-list">
-            <li><strong>ชื่อ:</strong> วินัย บุญเย็น</li>
-            <li><strong>ชื่อเล่น:</strong> เเชมป์</li>
-            <li><strong>วันเกิด:</strong> 10 ตุลาคม 2542</li>
-            <li><strong>จังหวัด:</strong> ปทุมธานี</li>
-            <li><strong>ที่อยู่:</strong> 80 ตำบลคลองหนึ่ง อำเภอคลองหลวง</li>
-            <li><strong>อายุ:</strong> 25 ปี</li>
-            <li><strong>อีเมล์:</strong> boonyen.winai@gmail.com</li>
-            <li><strong>เบอร์โทรศัพท์:</strong> 094-979-5496</li>
-          </ul>
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">
+          <span data-th="ข้อมูลส่วนตัว" data-en="Personal Information">ข้อมูลส่วนตัว</span>
+        </p>
+        <div class="about-grid">
+          <div class="about-info-card glass-card">
+            <div class="about-info-item">
+              <i class="fas fa-user"></i>
+              <div>
+                <span class="about-label" data-th="ชื่อ" data-en="Name">ชื่อ</span>
+                <span class="about-value" data-th="วินัย บุญเย็น (แชมป์)" data-en="Winai Boonyen (Champ)">วินัย บุญเย็น (แชมป์)</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-calendar"></i>
+              <div>
+                <span class="about-label" data-th="วันเกิด" data-en="Birthday">วันเกิด</span>
+                <span class="about-value" data-th="10 ตุลาคม 2542 (25 ปี)" data-en="October 10, 1999 (25 yrs)">10 ตุลาคม 2542 (25 ปี)</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="about-label" data-th="ที่อยู่" data-en="Location">ที่อยู่</span>
+                <span class="about-value" data-th="ตำบลคลองหนึ่ง อำเภอคลองหลวง จ.ปทุมธานี" data-en="Khlong Luang, Pathum Thani, Thailand">ตำบลคลองหนึ่ง อำเภอคลองหลวง จ.ปทุมธานี</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="about-label" data-th="อีเมล" data-en="Email">อีเมล</span>
+                <span class="about-value">boonyen.winai@gmail.com</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <span class="about-label" data-th="โทรศัพท์" data-en="Phone">โทรศัพท์</span>
+                <span class="about-value">094-979-5496</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ EDUCATION ═══ -->
     <section id="education" class="education-section">
       <div class="container">
-        <h2>Education</h2>
-        <div class="education-grid">
-          <div class="education-card">
-            <h3>มหาวิทยาลัยกรุงเทพ</h3>
-            <p>คณะเทคโนโลยีสารสนเทศและนวัตกรรม</p>
-            <p>สาขาวิทยาการคอมพิวเตอร์</p>
-            <p>2564 – 2567 | CUM GPA: 3.30</p>
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">
+          <span data-th="ประวัติการศึกษา" data-en="Academic Background">ประวัติการศึกษา</span>
+        </p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-date">2021 – 2024</span>
+              <h3>
+                <span data-th="มหาวิทยาลัยกรุงเทพ" data-en="Bangkok University">มหาวิทยาลัยกรุงเทพ</span>
+              </h3>
+              <p class="timeline-detail">
+                <span data-th="คณะเทคโนโลยีสารสนเทศและนวัตกรรม" data-en="School of Information Technology and Innovation">คณะเทคโนโลยีสารสนเทศและนวัตกรรม</span>
+              </p>
+              <p class="timeline-detail">
+                <span data-th="สาขาวิทยาการคอมพิวเตอร์" data-en="B.Sc. Computer Science">สาขาวิทยาการคอมพิวเตอร์</span>
+              </p>
+              <span class="timeline-badge">CUM GPA: 3.30</span>
+            </div>
           </div>
-          <div class="education-card">
-            <h3>โรงเรียนมกุฎเมืองราชวิทยาลัย</h3>
-            <p>มัธยมศึกษาปีที่ 4 - มัธยมศึกษาปีที่ 6</p>
-            <p>2556 – 2561 | CUM GPA: 2.97</p>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-school"></i></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-date">2013 – 2018</span>
+              <h3>
+                <span data-th="โรงเรียนมกุฎเมืองราชวิทยาลัย" data-en="Makut Mueang Ratchawitthayalai School">โรงเรียนมกุฎเมืองราชวิทยาลัย</span>
+              </h3>
+              <p class="timeline-detail">
+                <span data-th="มัธยมศึกษาปีที่ 4 – มัธยมศึกษาปีที่ 6" data-en="High School (Grade 10 – 12)">มัธยมศึกษาปีที่ 4 – มัธยมศึกษาปีที่ 6</span>
+              </p>
+              <span class="timeline-badge">CUM GPA: 2.97</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ PORTFOLIO ═══ -->
     <section id="portfolio" class="portfolio-section">
       <div class="container">
-        <h2>Portfolio</h2>
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-subtitle">
+          <span data-th="ผลงานที่ผ่านมา" data-en="Selected Projects">ผลงานที่ผ่านมา</span>
+        </p>
         <div class="portfolio-grid">
-          <!-- ตัวอย่าง 1 -->
-          <div class="portfolio-card">
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://www.figma.com/proto/QTZgvYEJHOd488LGKrGYo0/shiba_dog?node-id=297-1027&t=BQw4Tuob8nc2nWjX-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=297%3A1027&show-proto-sidebar=1" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
             <h3>Shiba Dog Farm</h3>
-            <p>PhotoType App For Buy Shiba Dog.</p>
-            <a
-              href="https://www.figma.com/proto/QTZgvYEJHOd488LGKrGYo0/shiba_dog?node-id=297-1027&t=BQw4Tuob8nc2nWjX-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=297%3A1027&show-proto-sidebar=1"
-              target="_blank"
-              >View Project</a
-            >
+            <p><span data-th="Prototype App สำหรับซื้อขายสุนัขพันธุ์ชิบะ" data-en="Prototype app for buying & selling Shiba dogs">Prototype App สำหรับซื้อขายสุนัขพันธุ์ชิบะ</span></p>
+            <div class="portfolio-tags"><span>Figma</span><span>UI/UX</span><span>Prototype</span></div>
           </div>
-          <!-- เพิ่มโปรเจกต์อื่นๆ ตามเดิม -->
-          <div class="portfolio-card">
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://www.figma.com/proto/BS7QmugXVDgBCTnPSbHHFo/IT-446?t=1sCe2q5Vesrq2Wuf-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
             <h3>FOD ELSE</h3>
-            <p>PhotoType App For food ordering app.</p>
-            <a
-              href="https://www.figma.com/proto/BS7QmugXVDgBCTnPSbHHFo/IT-446?t=1sCe2q5Vesrq2Wuf-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2"
-              target="_blank"
-              >View Project</a
-            >
+            <p><span data-th="Prototype App สำหรับสั่งอาหารออนไลน์" data-en="Prototype app for online food ordering">Prototype App สำหรับสั่งอาหารออนไลน์</span></p>
+            <div class="portfolio-tags"><span>Figma</span><span>UI/UX</span><span>Mobile</span></div>
           </div>
-          <div class="portfolio-card">
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://www.figma.com/proto/YqNuSbC4XUSDvZhCbD4BH1/Untitled?node-id=8-33&t=59QPVlIfzrGar3wf-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A33" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
             <h3>Health Food Delivery</h3>
-            <p>PhotoType App For Health food ordering app.</p>
-            <a
-              href="https://www.figma.com/proto/YqNuSbC4XUSDvZhCbD4BH1/Untitled?node-id=8-33&t=59QPVlIfzrGar3wf-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A33"
-              target="_blank"
-              >View Project</a
-            >
+            <p><span data-th="Prototype App สำหรับสั่งอาหารเพื่อสุขภาพ" data-en="Prototype app for healthy food delivery">Prototype App สำหรับสั่งอาหารเพื่อสุขภาพ</span></p>
+            <div class="portfolio-tags"><span>Figma</span><span>UI/UX</span><span>Health</span></div>
           </div>
-          <div class="portfolio-card">
-            <h3>Wholesale store management program</h3>
-            <p>PhotoType App For managing wholesale stores.</p>
-            <a
-              href="https://www.figma.com/design/0rTX7yPGTzEVCAJRG7eDZP/MockUp-Screen-SA-Project?node-id=0-1&t=GJmJO73IQnlZEPtn-1"
-              target="_blank"
-              >View Project</a
-            >
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://www.figma.com/design/0rTX7yPGTzEVCAJRG7eDZP/MockUp-Screen-SA-Project?node-id=0-1&t=GJmJO73IQnlZEPtn-1" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <h3>Wholesale Store Management</h3>
+            <p><span data-th="ระบบจัดการร้านค้าส่ง — Mockup &amp; Prototype" data-en="Wholesale store management system — Mockup &amp; Prototype">ระบบจัดการร้านค้าส่ง — Mockup &amp; Prototype</span></p>
+            <div class="portfolio-tags"><span>Figma</span><span>System Design</span></div>
           </div>
-          <div class="portfolio-card">
-            <h3>XO game Java</h3>
-            <p>Basic XO game developed in Java language.</p>
-            <a
-              href="https://github.com/ChampWinai/XO_game_Java/tree/main/XoGame"
-              target="_blank"
-              >View Project</a
-            >
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://github.com/ChampWinai/XO_game_Java/tree/main/XoGame" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <h3>XO Game</h3>
+            <p><span data-th="เกม XO พัฒนาด้วยภาษา Java" data-en="Tic-Tac-Toe game built with Java">เกม XO พัฒนาด้วยภาษา Java</span></p>
+            <div class="portfolio-tags"><span>Java</span><span>Game</span><span>OOP</span></div>
           </div>
-          <div class="portfolio-card">
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://github.com/ChampWinai/Jodvacap_app/tree/main" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
             <h3>Jodvacap App</h3>
-            <p>
-              This application is created with Android Studio for recording new
-              vocabulary encountered.
-            </p>
-            <a
-              href="https://github.com/ChampWinai/Jodvacap_app/tree/main"
-              target="_blank"
-              >View Project</a
-            >
+            <p><span data-th="แอปบันทึกคำศัพท์ พัฒนาด้วย Android Studio" data-en="Vocabulary recording app built with Android Studio">แอปบันทึกคำศัพท์ พัฒนาด้วย Android Studio</span></p>
+            <div class="portfolio-tags"><span>Android</span><span>Java</span><span>Mobile</span></div>
           </div>
-          <div class="portfolio-card">
-            <h3>David Chu's China Bistro Clone</h3>
-            <p>Create a website clone for "David Chu's China Bistro".</p>
-            <a
-              href="https://champwinai.github.io/-.Module-5-Coding-Assignment.github.io/"
-              target="_blank"
-              >View Project</a
-            >
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://champwinai.github.io/-.Module-5-Coding-Assignment.github.io/" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <h3>China Bistro Clone</h3>
+            <p><span data-th='เว็บไซต์โคลน "David Chu&#39;s China Bistro"' data-en='"David Chu&#39;s China Bistro" website clone'>เว็บไซต์โคลน "David Chu's China Bistro"</span></p>
+            <div class="portfolio-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
           </div>
-          <div class="portfolio-card">
-            <h3>Manage the library</h3>
-            <p>The library management program is developed using Python.</p>
-            <a
-              href="https://github.com/ChampWinai/Manage-the-library2"
-              target="_blank"
-              >View Project</a
-            >
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://github.com/ChampWinai/Manage-the-library2" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <h3>Library Management</h3>
+            <p><span data-th="ระบบจัดการห้องสมุด พัฒนาด้วย Python" data-en="Library management system built with Python">ระบบจัดการห้องสมุด พัฒนาด้วย Python</span></p>
+            <div class="portfolio-tags"><span>Python</span><span>CLI</span><span>Database</span></div>
           </div>
-          <div class="portfolio-card">
-            <h3>Mobile electricity Controlled(IOT)</h3>
-            <p>
-              Design and development of Smart electricity-Controlled hardware.
-            </p>
-            <a
-              href="https://github.com/ChampWinai/Mobile-electricity-Controlled/tree/main"
-              target="_blank"
-              >View Project</a
-            >
+          <div class="portfolio-card glass-card">
+            <div class="portfolio-card-header">
+              <i class="fas fa-folder-open"></i>
+              <a href="https://github.com/ChampWinai/Mobile-electricity-Controlled/tree/main" target="_blank" aria-label="Open"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <h3>Smart Electricity Control</h3>
+            <p><span data-th="ฮาร์ดแวร์ควบคุมไฟฟ้าอัจฉริยะผ่านมือถือ (IoT)" data-en="Smart electricity control hardware via mobile (IoT)">ฮาร์ดแวร์ควบคุมไฟฟ้าอัจฉริยะผ่านมือถือ (IoT)</span></p>
+            <div class="portfolio-tags"><span>IoT</span><span>C++</span><span>Hardware</span></div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ WORK EXPERIENCE ═══ -->
     <section id="work" class="work-section">
       <div class="container">
-        <h2>Work & Experience</h2>
-        <div class="work-experience">
-          <h3>
-            ฝึกงานตำแหน่ง Full-Stack Developer ที่ Smarterware (บริษัทในเครือ
-            Samart Telecom)
-          </h3>
-          <ul>
-            <li>
-              มีส่วนร่วมในการพัฒนา STS System
-              ซึ่งเป็นซอฟต์แวร์ระดับองค์กรที่สำคัญต่อการดำเนินงานของบริษัท
-              Samart Corporation
-            </li>
-            <li>
-              รับผิดชอบออกแบบและพัฒนา API ด้วย PostgreSQL (ผ่าน pgAdmin 4)
-              รวมถึงการสร้าง Stored Procedure, Function
-              และการจัดโครงสร้างข้อมูลให้มีประสิทธิภาพ
-            </li>
-            <li>
-              พัฒนาและปรับแต่ง RESTful API ด้วยภาษา C# บนแพลตฟอร์ม .NET
-              เพื่อให้ระบบสามารถเชื่อมต่อและทำงานร่วมกันได้อย่างราบรื่นและมีประสิทธิภาพสูง
-            </li>
-            <li>
-              ทดสอบและจัดทำเอกสาร API ด้วย Swagger และ Postman
-              เพื่อเพิ่มความน่าเชื่อถือและความสะดวกในการใช้งาน
-            </li>
-            <li>
-              จัดทำเอกสาร Service Design อย่างละเอียด
-              เพื่อรองรับการดูแลรักษาระบบในระยะยาวและการถ่ายทอดความรู้
-            </li>
-            <li>
-              ด้าน Frontend ใช้ React และ Next.js
-              ในการพัฒนาอินเทอร์เฟซที่เชื่อมต่อกับ API
-              เพื่อมอบประสบการณ์การใช้งานที่ลื่นไหลและตอบสนองผู้ใช้
-            </li>
-          </ul>
-          <h3>ประสบการณ์การทำงาน</h3>
-          <ul>
-            <li>
-              เข้าร่วมทีมพัฒนาของ Smarterware (ประจำที่สำนักงานประกันสังคม -
-              กองทุนเงินทดแทน)
-            </li>
-            <li>
-              รับผิดชอบดูแลและพัฒนาระบบดิจิทัลของกองทุนเงินทดแทน
-              โดยเข้าไปพัฒนาระบบที่หน่วยงานลูกค้าทุกสัปดาห์
-              เพื่อให้บริการมีความเสถียรและมีประสิทธิภาพ
-            </li>
-            <li>
-              ใช้เครื่องมือ Dynatrace
-              ในการมอนิเตอร์และวิเคราะห์ประสิทธิภาพของระบบแบบเรียลไทม์
-              เพื่อป้องกันปัญหาและเพิ่มประสิทธิภาพการทำงาน
-            </li>
-            <li>
-              รับผิดชอบแก้ไขบั๊กของระบบ
-              โดยดำเนินการตามกระบวนการอย่างเป็นระบบเพื่อให้ระบบกลับมาทำงานได้ตามปกติ
-            </li>
-            <li>
-              ประสานงานกับลูกค้าโดยตรง เพื่อเก็บรวบรวมความต้องการ
-              ให้คำปรึกษาทางเทคนิค และช่วยแก้ไขปัญหาที่เกิดขึ้นระหว่างการใช้งาน
-            </li>
-          </ul>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">
+          <span data-th="ประสบการณ์ทำงาน" data-en="Professional Experience">ประสบการณ์ทำงาน</span>
+        </p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-date">
+                <span data-th="ฝึกงาน — Smarterware (Samart Telecom)" data-en="Intern — Smarterware (Samart Telecom)">ฝึกงาน — Smarterware (Samart Telecom)</span>
+              </span>
+              <h3>Full-Stack Developer Intern</h3>
+              <ul class="work-list">
+                <li><span data-th="พัฒนา STS System ซอฟต์แวร์ระดับองค์กรของ Samart Corporation" data-en="Developed STS System, an enterprise-level software for Samart Corporation">พัฒนา STS System ซอฟต์แวร์ระดับองค์กรของ Samart Corporation</span></li>
+                <li><span data-th="ออกแบบและพัฒนา API ด้วย PostgreSQL — Stored Procedure, Function" data-en="Designed & developed APIs with PostgreSQL — Stored Procedures, Functions">ออกแบบและพัฒนา API ด้วย PostgreSQL — Stored Procedure, Function</span></li>
+                <li><span data-th="พัฒนา RESTful API ด้วย C# / .NET" data-en="Built RESTful APIs using C# / .NET">พัฒนา RESTful API ด้วย C# / .NET</span></li>
+                <li><span data-th="ทดสอบและจัดทำเอกสาร API ด้วย Swagger และ Postman" data-en="Tested & documented APIs with Swagger and Postman">ทดสอบและจัดทำเอกสาร API ด้วย Swagger และ Postman</span></li>
+                <li><span data-th="Frontend ด้วย React และ Next.js" data-en="Frontend development with React and Next.js">Frontend ด้วย React และ Next.js</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-building"></i></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-date">
+                <span data-th="Smarterware — ประจำสำนักงานประกันสังคม" data-en="Smarterware — at Social Security Office">Smarterware — ประจำสำนักงานประกันสังคม</span>
+              </span>
+              <h3>Software Developer</h3>
+              <ul class="work-list">
+                <li><span data-th="ดูแลและพัฒนาระบบดิจิทัลของกองทุนเงินทดแทน" data-en="Maintained & developed digital systems for the Compensation Fund">ดูแลและพัฒนาระบบดิจิทัลของกองทุนเงินทดแทน</span></li>
+                <li><span data-th="ใช้ Dynatrace มอนิเตอร์ประสิทธิภาพระบบแบบ Real-time" data-en="Used Dynatrace for real-time system performance monitoring">ใช้ Dynatrace มอนิเตอร์ประสิทธิภาพระบบแบบ Real-time</span></li>
+                <li><span data-th="แก้ไขบั๊กระบบอย่างเป็นระบบ" data-en="Systematic bug fixing and issue resolution">แก้ไขบั๊กระบบอย่างเป็นระบบ</span></li>
+                <li><span data-th="ประสานงานและให้คำปรึกษาทางเทคนิคกับลูกค้าโดยตรง" data-en="Direct client communication & technical consulting">ประสานงานและให้คำปรึกษาทางเทคนิคกับลูกค้าโดยตรง</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ SKILLS ═══ -->
     <section id="skill" class="skills-section">
       <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <span>HTML</span>
-            <div class="progress-bar"><div class="progress html"></div></div>
-            <p>
-              50% - Able to write basic websites for introducing yourself, blog
-              websites
-            </p>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">
+          <span data-th="ทักษะด้านเทคนิค" data-en="Technical Skills">ทักษะด้านเทคนิค</span>
+        </p>
+        <div class="skills-categories">
+          <div class="skill-category glass-card">
+            <h3><i class="fas fa-code"></i> Frontend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Next.js</span>
+            </div>
           </div>
-          <div class="skill-card">
-            <span>CSS</span>
-            <div class="progress-bar"><div class="progress css"></div></div>
-            <p>
-              50% - Can decorate basic websites such as colors, frames, spacing,
-              fonts.
-            </p>
+          <div class="skill-category glass-card">
+            <h3><i class="fas fa-server"></i> Backend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">ASP.NET Core</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">RESTful API</span>
+            </div>
           </div>
-          <div class="skill-card">
-            <span>JavaScript</span>
-            <div class="progress-bar"><div class="progress js"></div></div>
-            <p>30% - Understand the basic functions of javascript</p>
+          <div class="skill-category glass-card">
+            <h3><i class="fas fa-database"></i> Database</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">pgAdmin</span>
+            </div>
           </div>
-          <div class="skill-card">
-            <span>Java</span>
-            <div class="progress-bar"><div class="progress java"></div></div>
-            <p>
-              40% - Console Program Development, Working with Basic Libraries,
-              Basic Programming
-            </p>
-          </div>
-          <div class="skill-card">
-            <span>Python</span>
-            <div class="progress-bar"><div class="progress python"></div></div>
-            <p>
-              70% - Basic Data Analysis and Visualization, Console Program, Data
-              and file management
-            </p>
-          </div>
-          <div class="skill-card">
-            <span>MySQL</span>
-            <div class="progress-bar"><div class="progress mysql"></div></div>
-            <p>
-              30% - Database Management, Table Management, Data Manipulation,
-              Querying Data
-            </p>
-          </div>
-          <div class="skill-card">
-            <span>Microsoft Word, Excel</span>
-            <div class="progress-bar"><div class="progress ms"></div></div>
-            <p>
-              70% - Document management, spreadsheet management, formulas,
-              charts, Pivot Tables
-            </p>
-          </div>
-          <div class="skill-card">
-            <span>C++, C</span>
-            <div class="progress-bar"><div class="progress c"></div></div>
-            <p>
-              30% - Developing simple programs for microcontrollers, using
-              standard libraries
-            </p>
+          <div class="skill-category glass-card">
+            <h3><i class="fas fa-tools"></i> Tools &amp; Others</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Swagger</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">Dynatrace</span>
+              <span class="skill-tag">C / C++</span>
+              <span class="skill-tag">IoT</span>
+              <span class="skill-tag">Android Studio</span>
+              <span class="skill-tag">MS Office</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ CERTIFICATES ═══ -->
     <section id="certificate" class="certificates-section">
       <div class="container">
-        <h2>Certificates</h2>
+        <h2 class="section-title">Certificates</h2>
+        <p class="section-subtitle">
+          <span data-th="ใบรับรองและประกาศนียบัตร" data-en="Certifications & Awards">ใบรับรองและประกาศนียบัตร</span>
+        </p>
         <div class="certificates-grid">
-          <img
-            src="Photo/Certificate-Creating-Basic-Games-in-Metaverse_Winai-Boonyen_page-0001.jpg"
-            alt="Certificate"
-          />
-          <img
-            src="Photo/Certificate-Fundamental-Knowledge-of-Metaverse-Creating_Winai-Boonyen_page-0001.jpg"
-            alt="Certificate"
-          />
-          <img
-            src="Photo/Certificate-Make-Money-in-Metaverse_Winai-Boonyen_page-0001.jpg"
-            alt="Certificate"
-          />
-          <img src="Photo/Html Css Javascipt_page-0001.jpg" alt="Certificate" />
-          <img src="Photo/Python_data_St_page-0001.jpg" alt="Certificate" />
-          <img src="Photo/Python_Pro_data_page-0001.jpg" alt="Certificate" />
-          <img src="Photo/Python_web_data_page-0001.jpg" alt="Certificate" />
-          <img src="Photo/Foundations of Cybersecurity.png" alt="Certificate" />
+          <div class="cert-card"><img src="Photo/Certificate-Creating-Basic-Games-in-Metaverse_Winai-Boonyen_page-0001.jpg" alt="Creating Basic Games in Metaverse" /></div>
+          <div class="cert-card"><img src="Photo/Certificate-Fundamental-Knowledge-of-Metaverse-Creating_Winai-Boonyen_page-0001.jpg" alt="Fundamental Knowledge of Metaverse" /></div>
+          <div class="cert-card"><img src="Photo/Certificate-Make-Money-in-Metaverse_Winai-Boonyen_page-0001.jpg" alt="Make Money in Metaverse" /></div>
+          <div class="cert-card"><img src="Photo/Html Css Javascipt_page-0001.jpg" alt="HTML CSS JavaScript Certificate" /></div>
+          <div class="cert-card"><img src="Photo/Python_data_St_page-0001.jpg" alt="Python Data Structures" /></div>
+          <div class="cert-card"><img src="Photo/Python_Pro_data_page-0001.jpg" alt="Python Programming" /></div>
+          <div class="cert-card"><img src="Photo/Python_web_data_page-0001.jpg" alt="Python Web Data" /></div>
+          <div class="cert-card"><img src="Photo/Foundations of Cybersecurity.png" alt="Foundations of Cybersecurity" /></div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ CONTACT ═══ -->
     <section id="contact" class="contact-section">
-      <div class="container contact-container">
-        <div class="contact-info">
-          <h2>Contact</h2>
-          <p><strong>Name:</strong> Winai Boonyen</p>
-          <p><strong>Email:</strong> boonyen.winai@gmail.com</p>
-          <p><strong>Phone:</strong> 094-9795496</p>
-          <div class="contact-social">
-            <a
-              href="https://www.linkedin.com/in/winai-boonyen-78a5b3325/"
-              target="_blank"
-              ><img src="Photo/linkedin.png" alt="LinkedIn"
-            /></a>
-            <a href="https://github.com/ChampWinai" target="_blank"
-              ><img src="Photo/github.png" alt="GitHub"
-            /></a>
-          </div>
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">
+          <span data-th="ติดต่อผม" data-en="Get in Touch">ติดต่อผม</span>
+        </p>
+        <div class="contact-grid">
+          <a href="mailto:boonyen.winai@gmail.com" class="contact-card glass-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <h3>Email</h3>
+            <p>boonyen.winai@gmail.com</p>
+          </a>
+          <a href="tel:094-979-5496" class="contact-card glass-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <h3>Phone</h3>
+            <p>094-979-5496</p>
+          </a>
+          <a href="https://www.linkedin.com/in/winai-boonyen-78a5b3325/" target="_blank" class="contact-card glass-card">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <h3>LinkedIn</h3>
+            <p>Winai Boonyen</p>
+          </a>
+          <a href="https://github.com/ChampWinai" target="_blank" class="contact-card glass-card">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <h3>GitHub</h3>
+            <p>ChampWinai</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <button id="scrollToTopBtn" title="Go to top">^</button>
-    <script src="script.js"></script>
+    <!-- ═══ FOOTER ═══ -->
     <footer class="main-footer">
-      <div class="container"></div>
+      <div class="container">
+        <p>&copy; 2026 Winai Boonyen. All rights reserved.</p>
+      </div>
     </footer>
+
+    <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="script.js"></script>
   </body>
 </html>
